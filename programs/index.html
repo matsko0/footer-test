@@ -1,0 +1,280 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Balthazar&family=Quicksand:wght@300..700&display=swap"
+        rel="stylesheet">
+    <script src="https://kit.fontawesome.com/77e25ee663.js" crossorigin="anonymous"></script>
+    <title>LBF-PROJECT</title>
+</head>
+    <!-- Navbar -->
+    <div class="navbar">
+      <a href="../home-page/index.html">
+        <img src="logo.png" alt="Logo" class="logo" />
+      </a>
+      <div class="nav-toggle" id="nav-toggle">&#9776;</div>
+
+      <nav class="nav-links" id="nav-links">
+        <div class="dropdown">
+          <a
+            class="dropbtn"
+            href="../programs/index.html"
+            style="text-decoration: none"
+          >
+            Програми &#9662;
+          </a>
+          <div class="dropdown-content">
+            <a href="../programs-details-page/mini-startapdzii.html">Мини Стартапџии</a>
+            <a href="../programs-details-page/idni-osnovaci.html">Идни основачи</a>
+            <a href="../programs-details-page/mali-kreatori.html">Мали креатори</a>
+          </div>
+        </div>
+        <a class="dropbtn" href="../lecturers/index.html">Предавачи</a>
+        <a class="dropbtn" href="../services/index.html">Услуги</a>
+        <a class="dropbtn" href="../methodologies-page/index.html">Методологии</a>
+        <a class="dropbtn" href="../about-us/index.html">За нас</a>
+        <a class="dropbtn" href="../contact/index.html">Контакт</a>
+      </nav>
+      <input type="text" placeholder="🔍 Пребарај..." class="search" />
+    </div>
+
+<main>
+
+<!-- PROGRAM LISTING -->
+<section class="program-listing">
+  <!-- HEADER -->
+  <div class="program-header">
+    <h1 class="page-title">Истражете ги нашите Програми</h1>
+     
+    <div class="header-controls">
+      <!-- Filter Button -->
+      <div class="filter-container">
+        <button class="filter-button" id="filter-toggle">Филтрирај <i class="fa-solid fa-filter"></i>
+          <span id="active-filter-count" class="filter-count-badge hidden"></span>
+        </button>
+
+        <div class="filter-dropdown hidden" id="filter-dropdown">
+          <p class="filter-section-title">— Возраст —</p>
+          <select id="age-filter" class="filter-select">
+            <option value="">Сите</option>
+            <option value="6-9">6-9 години</option>
+            <option value="10-14">10-14 години</option>
+            <option value="15-18">15-18 години</option>
+          </select>
+
+          <p class="filter-section-title">— Цена —</p>
+          <div class="filter-price-range">
+            <div class="slider">
+              <input type="range" id="minRange" min="0" max="4000" value="0" step="100">
+              <input type="range" id="maxRange" min="0" max="4000" value="4000" step="100">
+            <div class="slider-track" id="sliderTrack"></div>
+            </div>
+            <div class="price-output" id="priceOutput">Од 0 ден – До 4000 ден</div>
+          </div>
+
+          <p class="filter-section-title">— Предавачи —</p>
+          <div class="custom-instructor-filter" id="instructor-list">
+            <div class="instructor-option" data-value="Elena">Елена Хаџи Пецова</div>
+            <div class="instructor-option" data-value="Viktor">Виктор Митевски</div>
+            <div class="instructor-option" data-value="Despina">Деспина Стојановска</div>
+            <div class="instructor-option" data-value="Jana">Јана Џеков</div>
+          </div>
+
+          <button id="apply-filters" class="apply-filters-btn">Примени филтри</button>
+          <button id="reset-filters" class="apply-filters-btn">Исчисти филтри</button>
+        </div>
+      </div>
+
+      <!-- Sort Button -->
+      <div class="sort-container">
+        <button class="sort-button" id="sort-toggle">Сортирај <i class="fa-solid fa-chevron-down"></i></button>
+        <div class="sort-dropdown hidden" id="sort-dropdown">
+          <p class="sort-price-title">— Сортирај по цена —</p>
+          <div class="sort-option" data-sort="price-asc">Најниска кон највисока</div>
+          <div class="sort-option" data-sort="price-desc">Највисока кон најниска</div>
+          <p class="sort-age-title">— Сортирај по возраст —</p>
+          <div class="sort-option" data-sort="age-asc">Од најмала кон најголема</div>
+          <div class="sort-option" data-sort="age-desc">Од најголема кон најмала</div>
+        </div>
+      </div>
+    </div> <!-- .header-controls -->
+  </div> <!-- .program-header -->
+
+  <div class="program-cards">
+    <div class="card" data-price="4000" data-age="15-18" data-instructor="Viktor">
+      <img src="cards1.jpeg" alt="Слика од програмата Мини стартапџии" />
+      <h3>КЛУБ “Мини стартапџии”</h3>
+      <p>Возраст: 15-18 години</p>
+      <p>Напреден курс за развој на стартап идеи и имплементација.</p>
+      <ul>
+        <li><i class="fa-solid fa-clock"></i> Времетраење: 10 недели</li>
+        <li><i class="fa-solid fa-book"></i> Вид: Проектно учење</li>
+        <li><i class="fa-regular fa-circle-dot"></i> Ниво: Напредно</li>
+        <li><i class="fa-solid fa-square-check"></i> Основи од бизнис и финансии</li>
+        <li><i class="fa-solid fa-calendar-days"></i> Старт: 01.09.2025 </li>
+        <li><i class="fa-solid fa-circle-dot"></i> Предавач/и: Виктор Митевски</li>
+        <li><i class="fa-solid fa-tag"></i> Цена: 4,000.00 денари</li>
+      </ul>
+      <a href="../programs-details-page/mini-startapdzii.html" class="more-btn">Повеќе</a>
+    </div>
+
+    <div class="card" data-price="3500" data-age="10-14" data-instructor="Elena">
+      <img src="cards2.jpg" alt="Идни основачи" />
+      <h3>КЛУБ “Идни основачи”</h3>
+      <p>Возраст: 10-14 години</p>
+      <p>Градење претприемачки вештини преку работа на реални проекти.</p>
+      <ul>
+        <li><i class="fa-solid fa-clock"></i> Времетраење: 10 недели</li>
+        <li><i class="fa-solid fa-book"></i> Вид: Тимска работа</li>
+        <li><i class="fa-regular fa-circle-dot"></i> Ниво: Средно</li>
+        <li><i class="fa-solid fa-square-check"></i> Претходно познавање на основни концепти</li>
+        <li><i class="fa-solid fa-calendar-days"></i> Старт: 01.09.2025 </li>
+        <li><i class="fa-solid fa-circle-dot"></i> Предавач/и: Елена Хаџи Пецова</li>
+        <li><i class="fa-solid fa-tag"></i> Цена: 3,500.00 денари</li>
+      </ul>
+      <a href="../programs-details-page/idni-osnovaci.html" class="more-btn">Повеќе</a>
+    </div>
+
+    <div class="card" data-price="3000" data-age="6-9" data-instructor="Jana">
+      <img src="cards3.jpg" alt="Мали Креатори" />
+      <h3>КЛУБ “Мали креатори”</h3>
+      <p>Возраст: 6-9 години</p>
+      <p>Креативна и практична настава за најмладите истражувачи.</p>
+      <ul>
+        <li><i class="fa-solid fa-clock"></i> Времетраење: 10 недели</li>
+        <li><i class="fa-solid fa-book"></i> Вид: Интерактивни работилници</li>
+        <li><i class="fa-regular fa-circle-dot"></i> Ниво: Почетно</li>
+        <li><i class="fa-solid fa-square-check"></i> Без предзнаење</li>
+        <li><i class="fa-solid fa-calendar-days"></i> Старт: 01.09.2025 </li>
+        <li><i class="fa-solid fa-circle-dot"></i> Предавач/и: Јана Џеков</li>
+        <li><i class="fa-solid fa-tag"></i> Цена: 3,000.00 денари</li>
+      </ul>
+      <a href="../programs-details-page/mali-kreatori.html" class="more-btn">Повеќе</a>
+    </div>
+  </div> 
+</section>
+
+
+    <!-- WHY JOIN SECTION -->
+    <section class="why-join">
+        <h2>Зошто да се приклучите?</h2>
+        <ul class="benefits">
+            <li><i class="fa-brands fa-get-pocket"></i>Поттикнување љубопитност и истражување на нови идеи</li>
+            <li><i class="fa-solid fa-bullseye"></i> Работа на вистински проекти со практична примена</li>
+            <li><i class="fa-solid fa-earth-europe"></i> Подготовка за идни професионални и животни предизвици</li>
+            <li><i class="fa-solid fa-lightbulb"></i> Развивање на иновативно размислување преку игра и експериментирање
+            </li>
+        </ul>
+    </section>
+
+
+    <!-- SKILLS GAINED SECTION -->
+    <section class="skills-section">
+        <div class="skills-content">
+            <div class="skills-list">
+                <ul>
+                    <li><i class="fa-solid fa-check"></i> Креативно размислување</li>
+                    <li><i class="fa-solid fa-check"></i> Решавање проблеми</li>
+                    <li><i class="fa-solid fa-check"></i> Тимска работа</li>
+                    <li><i class="fa-solid fa-check"></i> Комуникациски вештини</li>
+                    <li><i class="fa-solid fa-check"></i> Лидерство</li>
+                    <li><i class="fa-solid fa-check"></i> Самодоверба</li>
+                    <li><i class="fa-solid fa-check"></i> Претприемачки вештини</li>
+                    <li><i class="fa-solid fa-check"></i> Финансиска писменост</li>
+                    <li><i class="fa-solid fa-check"></i> Критичко размислување</li>
+                    <li><i class="fa-solid fa-check"></i> Презентациски вештини</li>
+                </ul>
+            </div>
+            <div class="skills-description">
+                <h2>Што децата би научиле во овој едукативен програм?</h2>
+                <p>
+                    Програмата е дизајнирана да го поттикне целосниот личен развој кај децата.
+                    Тие се охрабруваат да размислуваат надвор од рамките, да соработуваат со врсници,
+                    и да преземаат иницијатива преку практични проекти и интерактивни задачи.
+                    Покрај тоа, се запознаваат со основи на реалниот свет како финансии, организација и водење идеи до
+                    реализација.
+                </p>
+            </div>
+        </div>
+    </section>
+</main>
+
+<!-- Footer -->
+<footer class="site-footer">
+  <!-- Embedded Google Map via iframe (no API key) -->
+  <div class="map-container">
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2965.0905888501734!2d21.42481047561023!3d41.998331357878534!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1354144cae363653%3A0x56a4e0712f335296!2sBlvd.%20Partizanski%20Odredi%206%2C%20Skopje%201000!5e0!3m2!1sen!2smk!4v1750275865320!5m2!1sen!2smk"
+      width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade">
+    </iframe>
+  </div>
+
+  <!-- Footer Info -->
+  <div class="footer-container">
+    <!-- Address -->
+    <div class="footer-column">
+      <h3>📍 Адреса:</h3>
+      <p>Бул. Партизански Одреди 6/1<br>Скопје, Македонија</p>
+    </div>
+
+    <!-- Contact Info -->
+    <div class="footer-column">
+      <h3>📞 Телефон:</h3>
+      <p>+389(0)70800651</p>
+      <h3>📧 Е-пошта:</h3>
+      <p>littlebigfounders@gmail.com</p>
+    </div>
+
+    <!-- Navigation -->
+    <div class="footer-column">
+      <h3></h3>
+      <ul class="footer-nav">
+        <div class="footer-socials">
+              <a href="https://www.facebook.com/" target="_blank">
+                <img src="images-homepage/facebook.png" alt="Facebook" />
+              </a>
+              <a href="https://www.instagram.com/" target="_blank">
+                <img src="images-homepage/instagram.webp" alt="Instagram" />
+              </a>
+              <a href="https://www.youtube.com/" target="_blank">
+                <img src="images-homepage/youtube.png" alt="YouTube" />
+              </a>
+              <a href="https://x.com/" target="_blank">
+                <img src="images-homepage/twitter.png" alt="Twitter" />
+              </a>
+              <a href="https://mk.linkedin.com/" target="_blank">
+                <img src="images-homepage/linkedin.png" alt="LinkedIn" />
+              </a>
+            </div>
+      </ul>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    © 2025 All Rights Reserved | Little Big Founders
+  </div>
+</footer>
+
+    <!-- Contact Modal -->
+    <div id="contactModal" class="modal">
+      <div class="modal-content">
+        <span class="close" id="closeContactModal">&times;</span>
+        <h3>Контакт</h3>
+        <form class="contact-form">
+          <input type="text" placeholder="Име" required />
+          <input type="email" placeholder="Email" required />
+          <input type="text" placeholder="Програма / Услуга (опционално)" />
+          <textarea rows="4" placeholder="Вашата порака" required></textarea>
+          <button type="submit">Испрати</button>
+        </form>
+      </div>
+    </div>
+
+<script src="app.js"></script>
+<script src="db.js"></script>
+</body>
+
+</html>
