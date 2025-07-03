@@ -395,11 +395,26 @@ p {
   background-color: #e6d3c7;
   color: rgb(50, 19, 19);
   font-family: sans-serif;
+  padding: 2rem 1rem;
 }
 
 #map {
   width: 100%;
   height: 300px;
+}
+
+.map-wrapper {
+  max-width: 1920px;         /* 👈 control width */
+  margin: 0 auto;           /* 👈 center it */
+  padding: 0 1rem;          /* 👈 optional extra left/right padding */
+}
+
+.map-wrapper iframe {
+  width: 100%;              /* 👈 responsive */
+  height: 200px;            /* or whatever fits your design */
+  border: none;
+  border-radius: 12px;      /* optional rounded corners */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* optional shadow */
 }
 
 .footer-container {
@@ -411,10 +426,29 @@ p {
   padding: 40px 20px;
 }
 
+.map-container {
+  width: 80%;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 0 20px; /* 👈 Adds space on left and right */
+  height: 200px;
+  overflow: hidden;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.map-container iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+  display: block;
+}
+
 .footer-column {
+  position: relative;
+  padding: 0 1rem;
   flex: 1;
-  min-width: 250px;
-  margin-bottom: 20px;
+  min-width: 200px;
 }
 
 .footer-column h3 {
@@ -425,6 +459,16 @@ p {
 .footer-column p {
   font-size: 16px;
   margin: 4px 0;
+}
+
+.footer-column:not(:first-child)::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 5px;
+  height: 100%;
+  background-color: #cccccc;
 }
 
 .footer-nav {
@@ -443,6 +487,21 @@ p {
 
 .footer-nav a:hover {
   text-decoration: underline;
+}
+
+.footer-socials {
+  display: flex;
+  gap: 10px;
+  margin-top: 20px;
+  flex-wrap: wrap;
+  justify-content: start;
+}
+
+.footer-socials img {
+  width: 30px;
+  height: 30px;
+  margin: 0 5px;
+  transition: transform 0.2s ease, filter 0.2s ease;
 }
 
 .footer-bottom {
